@@ -18,12 +18,12 @@ public class Episodio {
         this.numeroEpisodio = dadosEpisodio.numero();
         try {
             this.avaliacao = Double.valueOf(dadosEpisodio.avaliacao());
-        } catch (NumberFormatException ex){
+        } catch (NumberFormatException ex) {
             this.avaliacao = 0.0;
         }
         try {
             this.dataLancamento = LocalDate.parse(dadosEpisodio.dataLancamento());
-        } catch (DateTimeParseException ex){
+        } catch (DateTimeParseException ex) {
             this.dataLancamento = null;
         }
 
