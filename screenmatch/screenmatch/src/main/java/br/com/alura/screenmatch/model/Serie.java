@@ -1,13 +1,10 @@
 package br.com.alura.screenmatch.model;
 
-import br.com.alura.screenmatch.service.ConsultaChatGPT;
 import jakarta.persistence.*;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.OptionalDouble;
-
-import static br.com.alura.screenmatch.service.ConsultaChatGPT.obterTraducao;
 
 @Entity
 @Table(name = "series")
@@ -29,7 +26,7 @@ public class Serie {
 
     public Serie() {}
 
-    public Serie(DadosSerie dadosSerie){
+    public Serie(DadosSerie dadosSerie) {
         this.titulo = dadosSerie.titulo();
         this.totalTemporadas = dadosSerie.totalTemporadas();
         this.avaliacao = OptionalDouble.of(Double.valueOf(dadosSerie.avaliacao())).orElse(0.0);

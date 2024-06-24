@@ -3,7 +3,6 @@ package br.com.alura.screenmatch.model;
 
 import jakarta.persistence.*;
 
-import java.time.DateTimeException;
 import java.time.LocalDate;
 import java.time.format.DateTimeParseException;
 
@@ -22,7 +21,8 @@ public class Episodio {
     @ManyToOne
     private Serie serie;
 
-    public Episodio(){}
+    public Episodio() {}
+
     public Episodio(Integer numeroTemporada, DadosEpisodio dadosEpisodio) {
         this.temporada = numeroTemporada;
         this.titulo = dadosEpisodio.titulo();
